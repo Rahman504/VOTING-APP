@@ -1,38 +1,247 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.containers {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Hide the browser's default radio button */
+.containers input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
+/* CHECKBOX CHECKMARK */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  /* Create a custom checkbox */
+.checkmarks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid hsl(186, 15%, 59%);
+    transition: background-color 0.3s, border-color 0.3s;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  
+  /* When the checkbox is checked, add a blue background */
+  .containers input:checked ~ .checkmarks {
+    background-color: rgb(81, 255, 0);
+    border: 1px solid hsl(135, 82%, 27%);
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmarks:after {
+    content: "";
+    position: absolute;
+    display: none;
   }
-}
+  
+  /* Show the checkmark when checked */
+  .containers input:checked ~ .checkmarks:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .containers .checkmarks:after {
+    left: 9px;
+    top: 7px;
+    width: 6px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  body {
+    background-color: hsl(190, 27%, 96%);
+  }
+  .link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    background-color: rgb(81, 255, 0);
+    display: inline-block;
+    text-align: center;
+  }
+
+  /* Accreditials & login page */
+  section.all {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    border-radius: 5px;
+    background-color: #fff;
+    padding-bottom: 20px;
+    border: 1px solid hsl(186, 15%, 59%);
+  }
+  .login {
+    margin-top: 7px;
+  }
+  section.all > div.log, section.all > section > div.log {
+    background-color: rgb(0, 153, 255); 
+    padding: 10px 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  section.all > div > h1, section.all> section > div.log > h1 {
+    width: 95%;
+    margin: auto;
+    color: #fff;
+    font-weight: 700;
+  }
+  section.all form {
+    background-color: #fff;
+  }
+  section.all form div {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  section.all form div input, .link {
+    width: 100%;
+    padding: 9px 0px;
+    border-radius: 3px;
+    border: none;
+  }
+  section.all form div input {
+    border: 0.3px solid hsl(186, 15%, 59%);
+    padding-left: 10px;
+    margin-top: 7px;
+  }
+  section.all form div input:focus {
+    outline: none;
+    box-shadow: 0 0 3px 3px rgba(0, 123, 255, 0.5);
+    border: 0.3px solid hsl(186, 15%, 59%);
+  }
+
+  /* Position page */
+  section.position {
+    background-color: unset;
+    position: relative;
+    transform: unset;
+    left: unset;
+    top: unset;
+    width: 70%;
+    padding-bottom: unset;
+    border: unset;
+    margin: auto;
+    margin-top: 30px;
+  }
+  section.position > section {
+    background-color: #fff;
+    margin-bottom: 20px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 5px;
+    padding-bottom: 20px;
+  }
+  section.position > section > p {
+    text-align: center;
+    margin-top: 30px;
+  }
+  div.choose {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+  }
+  div.choose img {
+    margin: 0px 20px;
+  }
+  div.choose article p:nth-child(1) {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .img {
+    border-radius: 5px;
+  }
+  section.all > section div:nth-child(3) {
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+  }
+  section.all > section div:nth-child(3) p {
+    font-weight: 700;
+  }
+  section.all > section div:nth-child(3) article {
+    border: 1px solid hsl(186, 15%, 59%);
+    margin-top: 5px;
+    padding: 15px 0px;
+    padding-left: 20px;
+    border-radius: 5px;
+  }
+  section.all > section div:nth-child(3) article span {
+    margin-right: 5px;
+  }
+  section.all > section div:nth-child(3) article span.num {
+    background-color: rgb(0, 153, 255);
+    padding: 3px 8px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+  section.all > section div:nth-child(3) article span.req {
+    color: rgb(218, 28, 28);
+    font-size: .9rem;
+  }
+  hr {
+    margin-top: 20px;
+  }
+  div.div {
+    width: 70%;
+    margin: auto;
+    background-color: #fff;
+    padding: 17px 0px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 5px;
+    margin-bottom: 80px;
+  }
+  .vote {
+    display: block;
+    width: 95%;
+    margin: auto;
+  }
+  .title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+  }
+  .sent {
+    text-align: center;
+  }
+  .sent img {
+    width: 30%;
+  }
+  .sent h1 {
+    font-size: 2rem;
+  }
+  .sent p {
+    margin: 5px 0px;
+  }
+
+  @media screen and (max-width: 600px) {
+    section.all, div.div {
+      width: 90%;
+    }
+  }
