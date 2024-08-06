@@ -8,7 +8,7 @@ const PositionTemplate = ({ title, showTitle, post, contestants }) => {
         {showTitle && <h1 className='title'>{title}</h1>}
         <section className="all position">
             <section>
-                <div className="log">
+                <div className="log position">
                     <h1>{post}</h1>
                 </div>
                 <p>List of contestant for {post} position</p>

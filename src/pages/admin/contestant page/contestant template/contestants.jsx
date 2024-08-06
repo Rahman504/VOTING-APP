@@ -29,26 +29,42 @@ const ContestantPage = () => {
                 },
         ];
         return (
-                <>
-                <div>
-                        <PositionTemplate 
-                        title="DemocracyNow"
-                        showTitle={true}
-                        post="President" 
-                        contestants={presidentContestants} 
-                        />
-                        <PositionTemplate 
-                        title="DemocracyNow"
-                        showTitle={false}
-                        post="Vice President" 
-                        contestants={vicePresidentContestants} 
-                        />
-                </div>  
-                <div className="div">
-                   <Link to="/admin/addcontestant" className="link vote">Add Contestant</Link>        
-                </div>
+                <section className="welcome con">
+                        <nav className="nav">
+                                <ul>
+                                        <li><Link to="/admin/dashboard" className="side">Dashboard</Link></li>
+                                        <hr/>
+                                        <li><Link to="/admin/posts" className="side" >Post</Link></li>
+                                        <hr/>
+                                        <li><Link to="/admin/contestants" className="side">Contestants</Link></li>
+                                        <hr/>
+                                        <li><Link to="/admin/result" className="side">Result</Link></li>
+                                        <hr/>
+                                        <li><Link to="/admin/status" className="side">Voters</Link></li>
+                                </ul>
+                        </nav>
+                        <section className="contest">
+                        <div>
+                                <PositionTemplate 
+                                title="DemocracyNow"
+                                showTitle={true}
+                                post="President" 
+                                contestants={presidentContestants} 
+                                />
+                                <PositionTemplate 
+                                title="DemocracyNow"
+                                showTitle={false}
+                                post="Vice President" 
+                                contestants={vicePresidentContestants} 
+                                />
+                        </div> 
+                        <div className="div third">
+                            <Link to="/admin/addcontestant" className="link vote">Add Contestant</Link>        
+                        </div>
+                        </section>
+                </section>
+                
                    
-                </>
               
         );
 };

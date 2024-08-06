@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContestantInfo = ({ image, contestantName, radio, description }) => {
+const ContestantInfo = ({ image, contestantName, description }) => {
     return (
         <div className="choose">
             <img src={image} alt="contestant" width="110px" height="80px" className="img" />

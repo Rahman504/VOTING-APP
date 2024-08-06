@@ -4,8 +4,26 @@ import { Link } from "react-router-dom";
 
 const UserStatus = () => {
     return (
+        <section className="welcome con">
+        <nav className="nav">
+            <ul>
+                <li><Link to="/admin/dashboard" className="side">Dashboard</Link></li>
+                <hr/>
+                <li><Link to="/admin/posts" className="side" >Post</Link></li>
+                <hr/>
+                <li><Link to="/admin/contestants" className="side">Contestants</Link></li>
+                <hr/>
+                <li><Link to="/admin/result" className="side">Result</Link></li>
+                <hr/>
+                <li><Link to="/admin/status" className="side">Voters</Link></li>
+            </ul>                   
+        </nav>
         <section className='table'>
-            <h1>VOTERS</h1>
+            <div>
+               <h1>VOTERS</h1> 
+               <Link to="/" className="active">Add User</Link>
+            </div>
+            
             <form>
                 <tr>
                     <th>S/N</th>
@@ -76,6 +94,7 @@ const UserStatus = () => {
                     </td>
                 </tr>
             </form>
+        </section>
         </section>
     );
 };

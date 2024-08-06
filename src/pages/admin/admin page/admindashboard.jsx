@@ -14,7 +14,7 @@ const AdminDashboard = () => {
                     <li><Link to="/admin/status" className="side">Voters</Link></li>
                 </ul>
             </nav>
-            <div>
+            <div className="begin">
                 <h1>WELCOME</h1>
                 <article className="start">
                     <p>Start Vote</p>

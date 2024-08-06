@@ -16,7 +16,7 @@ const adminLoginPage = () => {
                     <input type="text" name="password" />
                 </div>
                 <div>
-                    <Link to="/admin/addpost" className="link login">Login</Link>
+                    <Link to="/admin/dashboard" className="link login">Login</Link>
                 </div>
             </form>
         </section>
