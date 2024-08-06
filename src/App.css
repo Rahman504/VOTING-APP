@@ -71,6 +71,72 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+  /* Toggle switch */
+  
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 45px;
+	height: 24px;
+  margin-left: 8px;
+  border: 1px solid rgb(0, 153, 255);
+	border-radius: 34px;
+	}
+
+	.switch input { 
+	opacity: 0;
+	width: 0;
+	height: 0;
+	}
+
+	.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-transition: .4s;
+	transition: .4s; 
+	}
+
+	.slider:before {
+	position: absolute;
+	content: "";
+	height: 18px;
+	width: 18px;
+	left: 3.2px;
+	bottom: 2.5px;
+	background-color: rgb(0, 153, 255);
+	-webkit-transition: .4s;
+	transition: .4s;
+	}
+	
+
+	input:checked + .slider {
+    background: hsl(236, 72%, 84%);
+	}
+
+	input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+	}
+
+	input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(19px);
+	}
+
+	.slider.round {
+	border-radius: 34px;
+	}
+
+	.slider.round:before {
+	border-radius: 50%;
+	}
+
+
+
   body {
     background-color: hsl(190, 27%, 96%);
   }
@@ -118,21 +184,21 @@
     margin: auto;
     margin-top: 20px;
   }
-  section.all form div input, .link {
+  section.all form div input, .link, #dropdown {
     width: 100%;
     padding: 9px 0px;
     border-radius: 3px;
     border: none;
   }
   section.all form div input {
-    border: 0.3px solid hsl(186, 15%, 59%);
+    border: 1px solid hsl(186, 15%, 59%);
     padding-left: 10px;
     margin-top: 7px;
   }
   section.all form div input:focus {
     outline: none;
     box-shadow: 0 0 3px 3px rgba(0, 123, 255, 0.5);
-    border: 0.3px solid hsl(186, 15%, 59%);
+    border: 1px solid hsl(186, 15%, 59%);
   }
 
   /* Position page */
@@ -168,6 +234,19 @@
   }
   div.choose img {
     margin: 0px 20px;
+  }
+  section.result {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.result h1 {
+    width: 20%;
+  }
+  div.another {
+    width: 100%;
   }
   div.choose article p:nth-child(1) {
     font-weight: 700;
@@ -238,6 +317,119 @@
   }
   .sent p {
     margin: 5px 0px;
+  }
+
+  /* Admin dashboard */
+  div.welcome {
+    display: flex;
+  }
+  div.welcome nav {
+    width: 200px; 
+    height: 100vh; 
+    padding: 10px; 
+    background: #fff;
+  }
+  div.welcome nav ul {
+    list-style-type: none; 
+    margin-top: 15px;
+  }
+  div.welcome nav ul li .side {
+    text-decoration: none;
+    display: block;
+    color: black;
+  }
+  div.welcome nav ul hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  div.welcome div {
+    margin-left: 20px;
+    padding: 10px;
+  }
+  div.welcome div h1 {
+    margin-top: 15px;
+  }
+  .start {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  /* Posts page */
+  section.posts {
+    width: 95%;
+    margin: auto;
+    margin-top: 15px;
+  }
+  section.posts h1 {
+    text-decoration: underline;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  section.posts ul {
+    list-style-type: none;
+  }
+  section.posts ul li {
+    margin-bottom: 10px;
+  }
+  section.posts ul .add {
+    text-decoration: none;
+    background-color: #eee;
+    color: black;
+    padding: 5px;
+    font-size: .9rem;
+    border: 1px solid black;
+  }
+
+  /* Add Contestant Page */
+  #dropdown {
+    border: 1px solid hsl(186, 15%, 59%);
+    padding-left: 10px;
+    margin-top: 7px;
+  }
+  #dropdown:focus {
+    outline: none;
+    box-shadow: 0 0 3px 3px rgba(0, 123, 255, 0.5);
+  }
+  .not {
+    font-size: .8rem;
+    margin-top: 7px;
+  }
+
+
+  .result:last-of-type + .divider {
+    display: none;
+}
+
+
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 20px;
+	}
+  table {
+    width: 100%;
+  }
+  section.table {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+  }
+  section.table > h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .active {
+    text-decoration: none;
+    background-color: #eee;
+    color: black;
+    padding: 5px;
+    font-size: .9rem;
+    border: 1px solid black;
+    margin: 5px;
   }
 
   @media screen and (max-width: 600px) {

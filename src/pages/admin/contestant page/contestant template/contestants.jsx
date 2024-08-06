@@ -1,20 +1,18 @@
 import PositionTemplate from "./positiontemplate";
-import presImg from "../../../vlcsnap-error029.png";
+import presImg from "../../../../vlcsnap-error029.png";
 import { Link } from "react-router-dom";
 
 
-const PositionsPage = () => {
+const ContestantPage = () => {
         const presidentContestants = [
                 {
                 image: presImg,
                 contestantName: 'Adebayo',
-                radio: 'president',
                 description: 'Most reliable person'
                 },
                 {
                 image: presImg,
                 contestantName: 'Chioma',
-                radio: 'president',
                 description: 'A true leader'
                 },
         ];
@@ -22,13 +20,11 @@ const PositionsPage = () => {
                 {
                   image: presImg,
                   contestantName: 'David',
-                  radio: 'vice',
                   description: 'Excellent communicator'
                 },
                 {
                   image: presImg,
                   contestantName: 'Eve',
-                  radio: 'vice',
                   description: 'Strong organizational skills'
                 },
         ];
@@ -49,7 +45,7 @@ const PositionsPage = () => {
                         />
                 </div>  
                 <div className="div">
-                   <Link to="/votesent" className="link vote">Submit vote</Link>        
+                   <Link to="/admin/addcontestant" className="link vote">Add Contestant</Link>        
                 </div>
                    
                 </>
@@ -57,4 +53,4 @@ const PositionsPage = () => {
         );
 };
 
-export default PositionsPage;
+export default ContestantPage;

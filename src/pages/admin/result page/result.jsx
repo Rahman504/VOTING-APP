@@ -1,35 +1,34 @@
-import PositionTemplate from "./positiontemplate";
+import PositionTemplate from "./resulttemplate";
 import presImg from "../../../vlcsnap-error029.png";
-import { Link } from "react-router-dom";
 
 
-const PositionsPage = () => {
+const ResultPage = () => {
         const presidentContestants = [
                 {
                 image: presImg,
                 contestantName: 'Adebayo',
-                radio: 'president',
-                description: 'Most reliable person'
+                votes: '55 votes',
+                description: 'Most reliable person',
                 },
                 {
                 image: presImg,
                 contestantName: 'Chioma',
-                radio: 'president',
-                description: 'A true leader'
+                votes: '100 votes',
+                description: 'A true leader',
                 },
         ];
         const vicePresidentContestants = [
                 {
                   image: presImg,
                   contestantName: 'David',
-                  radio: 'vice',
-                  description: 'Excellent communicator'
+                  votes: '78 votes',
+                  description: 'Excellent communicator',
                 },
                 {
                   image: presImg,
                   contestantName: 'Eve',
-                  radio: 'vice',
-                  description: 'Strong organizational skills'
+                  votes: '279 votes',
+                  description: 'Strong organizational skills',
                 },
         ];
         return (
@@ -48,13 +47,10 @@ const PositionsPage = () => {
                         contestants={vicePresidentContestants} 
                         />
                 </div>  
-                <div className="div">
-                   <Link to="/votesent" className="link vote">Submit vote</Link>        
-                </div>
                    
                 </>
               
         );
 };
 
-export default PositionsPage;
+export default ResultPage;
